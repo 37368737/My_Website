@@ -1,12 +1,12 @@
 body{
   font-family: Arial, sans-serif;
   text-align: center;
-  background: linear-gradient(to right, blue, white);
+  background: linear-gradient(to right, rgb(127, 238, 75), rgb(16, 236, 225));
   background-size: cover;
 }
 h1 {
-  color: blueviolet;
-  font-size: x-large;
+  color: rgb(229, 9, 27);
+  font-size: 100px;
 }
 
 .countdown-container{
@@ -16,4 +16,5 @@ h1 {
 #countdown{
   display: flex;
   font-size: 36px;
+  align-items: center;
 }
