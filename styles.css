@@ -1,15 +1,19 @@
 body{
   font-family: Arial, sans-serif;
   text-align: center;
+  background: linear-gradient(to right, blue, white);
+  background-size: cover;
 }
 h1 {
-  color: aqua;
+  color: blueviolet;
+  font-size: x-large;
 }
 
 .countdown-container{
-  margin-top: 50px;
+  margin-top: 0%;
 }
 
 #countdown{
+  display: flex;
   font-size: 36px;
 }
