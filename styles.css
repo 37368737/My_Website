@@ -1,4 +1,15 @@
+body{
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 h1 {
-    color: #333;
-    font-family: Arial, sans-serif;
-  }
+  color: aqua;
+}
+
+.countdown-container{
+  margin-top: 50px;
+}
+
+#countdown{
+  font-size: 36px;
+}
