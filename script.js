@@ -22,11 +22,35 @@ const countdownTimer = setInterval(function() {
   const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
   // Display the countdown
+  document.getElementById("message").innerHTML = " ";
   document.getElementById("countdown").innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
   // If the countdown is finished, display a message
-  if (timeDiff < 0) {
-    clearInterval(countdownTimer);
-    document.getElementById("countdown").innerHTML = "Event has started!";
+  if (isNaN(days)){
+    document.getElementById("message").innerHTML = "No date/time added";
+    document.getElementById("countdown").innerHTML = " ";
+  }
+  else if(days < 0){
+    if (hours >= 0){
+    document.getElementById("message").innerHTML = " ";
+    document.getElementById("countdown").innerHTML = `${0} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    }
+    else if (hours<0){
+        if (minutes >= 0){
+            document.getElementById("message").innerHTML = " ";
+            document.getElementById("countdown").innerHTML = `${0} days ${0} hours ${minutes} minutes ${seconds} seconds`;
+        }
+        else if (minutes < 0){
+            if(seconds>=0){
+                document.getElementById("message").innerHTML = " ";
+                document.getElementById("countdown").innerHTML = `${0} days ${0} hours ${0} minutes ${seconds} seconds`;
+            }
+            else if (seconds<0){
+                document.getElementById("message").innerHTML = "Event has started!";
+                document.getElementById("countdown").innerHTML = " ";
+
+            }
+        }
+    }
   }
 }, 1000);

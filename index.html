@@ -6,16 +6,24 @@
     <link rel = "stylesheet" href = "styles.css">
 </head>
 <body>
-    <div class = "countdown-container">
+        <head>
         <h1>Countdown Timer</h1>
+        </head>
+    <div class = "countdown-container">
         <h2>Enter the Date and Time of the upcoming event</h2>
         <label for = "input-date">Date:</label>
             <input type="date" id = "input-date"><br>
 
         <label for = "input-time">Time:</label>
             <input type="time" id="input-time">
-        <div id="countdown"></div>
+            <img src="Images/R.gif" class="hourglass">
     </div>
+    <section>
+    <div id="message"></div>
+    </section>
+    <footer>
+    <div id="countdown"></div>
+    </footer>
     <script src = "script.js"></script>
 </body>
 </html>
