@@ -13,6 +13,7 @@ function startAlarm(){
   if (Notification && Notification.permission === "granted") {
     new Notification("Event has started!");
 }
+clearInterval(alarmTimeout);
   }
 }
 // Function to dismiss the alarm
@@ -23,7 +24,10 @@ function dismissAlarm() {
   document.getElementById("dismiss-button").style.display = "none";
   document.getElementById("message").innerHTML = "No date/time added";
   document.getElementById("countdown").innerHTML = " ";
-clearInterval(alarmTimeout);
+  // Clear the input fields
+  document.getElementById("input-date").value = "";
+  document.getElementById("input-time").value = "";
+
 clearInterval(countdownTimer);
 }
 
