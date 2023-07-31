@@ -49,6 +49,8 @@ const countdownTimer = setInterval(function() {
                 document.getElementById("message").innerHTML = "Event has started!";
                 document.getElementById("countdown").innerHTML = " ";
                 alert('EVENT HAS STARTED!!!');
+                inputTime.value = '';
+                inputDate.value = '';
 
             }
         }
