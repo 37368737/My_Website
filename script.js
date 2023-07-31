@@ -1,17 +1,20 @@
 let alarmTimeout;
 
 function startAlarm(){
-  // Play the alarm sound
-  if(document.getElementById("message").innerHTML == "Event has started!"){
+  const messageElement = document.getElementById("message");
+
+  if(messageElement.innerHTML === "Event has started!"){
   const alarmSound = document.getElementById("alarm-sound");
   alarmSound.play();
 
-  const dismiss = document.getElementById("dismiss-button").style.display = "block";
+  document.getElementById("dismiss-button").style.display = "block";
 
   // Display a notification if the browser supports it
   if (Notification && Notification.permission === "granted") {
     new Notification("Event has started!");
 }
+clearInterval(alarmTimeout);
+
   }
 }
 // Function to dismiss the alarm
@@ -20,11 +23,8 @@ function dismissAlarm() {
   alarmSound.pause();
   alarmSound.currentTime = 0; // Reset the audio to the beginning
   document.getElementById("dismiss-button").style.display = "none";
-  const inputDate = document.getElementById("input-date") = '';
-  const inputTime = document.getElementById("input-time") = '';
   document.getElementById("message").innerHTML = "No date/time added";
   document.getElementById("countdown").innerHTML = " ";
-  clearInterval(alarmTimeout);
 }
 
 // Update the countdown every second
@@ -77,11 +77,8 @@ const countdownTimer = setInterval(function() {
             else if (seconds<0){
                 document.getElementById("message").innerHTML = "Event has started!";
                 document.getElementById("countdown").innerHTML = " ";
-          
                 startAlarm();
-                // Clear the input fields
-              inputTime.value = "";
-              inputDate.value = "";
+                
         }   
       }
     }
