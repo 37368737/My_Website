@@ -48,12 +48,24 @@ const countdownTimer = setInterval(function() {
             else if (seconds<0){
                 document.getElementById("message").innerHTML = "Event has started!";
                 document.getElementById("countdown").innerHTML = " ";
-                alert('EVENT HAS STARTED!!!');
-                inputTime.value = '';
-                inputDate.value = '';
+                
+                // Play the alarm sound
+                const alarmSound = document.getElementById("alarm-sound");
+                alarmSound.play();
 
-            }
-        }
+                // Display a notification if the browser supports it
+                if (Notification && Notification.permission === "granted") {
+                new Notification("Event has started!");
+          }
+
+          // Clear the input fields
+          inputTime.value = "";
+          inputDate.value = "";
+
+          // Clear the countdown interval
+          clearInterval(countdownTimer);
+        }   
+      }
     }
   }
 }, 1000);
