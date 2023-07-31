@@ -1,41 +1,41 @@
 body{
   font-family: Arial, sans-serif;
   text-align: center;
-  background: linear-gradient(to right, rgb(127, 238, 75), rgb(16, 236, 225));
+  justify-content: center;
+  background: linear-gradient(to right, #45ea17, #31ede1);
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
 }
 h1 {
-  color: rgb(229, 9, 27);
+  color: #333;
   font-size: 100px;
+
 }
 
 .countdown-container{
-  margin-top: 0%;
+  margin-top: 0;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hourglass{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 400px;
-  bottom: 40%;
+  border-radius: 50%;
 }
 
 #countdown{
   display: flex;
   font-size: 50px;
+  text-align: center;
+  color: #E0DDCA;
 }
 #message{
-  display: flex;
+  display: block;
+  margin: 0 auto;
   font-size: 50px;
-}
-section{
-  position: absolute;
-  bottom: 25%;
-  left: 39%;
-}
-footer{
-  position: absolute;
-  bottom: 15%;
-  left: 29%;
+  color: #E0DDCA;
 }
