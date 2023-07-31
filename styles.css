@@ -39,3 +39,21 @@ h1 {
   font-size: 50px;
   color: #E0DDCA;
 }
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px; /* Decrease font size for smaller screens */
+  }
+
+  .hourglass {
+    width: 250px; /* Adjust width for smaller screens */
+  }
+
+  #countdown {
+    font-size: 30px; /* Decrease font size for smaller screens */
+  }
+
+  #message {
+    font-size: 30px; /* Decrease font size for smaller screens */
+  }
+}
