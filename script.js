@@ -18,6 +18,8 @@ function dismissAlarm() {
   alarmSound.pause();
   alarmSound.currentTime = 0; // Reset the audio to the beginning
   document.getElementById("dismiss-button").style.display = "none";
+  inputTime.value = "";
+  inputDate.value = "";
   clearInterval(alarmTimeout);
 }
 
