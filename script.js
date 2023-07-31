@@ -27,8 +27,6 @@ function dismissAlarm() {
   // Clear the input fields
   document.getElementById("input-date").value = "";
   document.getElementById("input-time").value = "";
-
-clearInterval(countdownTimer);
 }
 
 // Update the countdown every second
