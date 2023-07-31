@@ -1,3 +1,5 @@
+let alarmTimeout;
+
 function startAlarm(){
   // Play the alarm sound
   const alarmSound = document.getElementById("alarm-sound");
@@ -15,7 +17,8 @@ function dismissAlarm() {
   const alarmSound = document.getElementById("alarm-sound");
   alarmSound.pause();
   alarmSound.currentTime = 0; // Reset the audio to the beginning
-  document.getElementById("dismiss-button").style.display = "none"; // Hide the dismiss button
+  document.getElementById("dismiss-button").style.display = "none";
+  clearInterval(alarmTimeout);
 }
 
 // Update the countdown every second
@@ -24,6 +27,7 @@ const countdownTimer = setInterval(function() {
     // Get the input values for the date and time
     const inputDate = document.getElementById("input-date").value;
     const inputTime = document.getElementById("input-time").value;
+  document.getElementById("dismiss-button").style.display = "none";
 
     // Set the countdown date (replace with your desired date and time)
     countdownDate = new Date(inputDate + " " + inputTime);
