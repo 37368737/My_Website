@@ -66,7 +66,7 @@ const countdownTimer = setInterval(function() {
                 if (Notification && Notification.permission === "granted") {
                 new Notification("Event has started!");
           }
-
+          startAlarm();
           // Clear the input fields
           inputTime.value = "";
           inputDate.value = "";
