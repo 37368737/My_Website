@@ -61,9 +61,6 @@ const countdownTimer = setInterval(function() {
           // Clear the input fields
           inputTime.value = "";
           inputDate.value = "";
-
-          // Clear the countdown interval
-          clearInterval(countdownTimer);
         }   
       }
     }
