@@ -31,13 +31,13 @@ h1 {
   display: flex;
   font-size: 50px;
   text-align: center;
-  color: #E0DDCA;
+  color: hsl(0, 89%, 48%);
 }
 #message{
   display: block;
   margin: 0 auto;
   font-size: 50px;
-  color: #E0DDCA;
+  color: hsl(0, 89%, 48%);
 }
 /* Media query for smaller devices */
 @media (max-width: 768px) {
