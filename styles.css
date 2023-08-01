@@ -39,21 +39,40 @@ h1 {
   font-size: 50px;
   color: hsl(0, 89%, 48%);
 }
-/* Media query for smaller devices */
+
+#dismiss-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#dismiss-button:hover{
+  background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
   h1 {
-    font-size: 60px; /* Decrease font size for smaller screens */
+    font-size: 60px; 
   }
 
   .hourglass {
-    width: 250px; /* Adjust width for smaller screens */
+    width: 250px; 
   }
 
   #countdown {
-    font-size: 30px; /* Decrease font size for smaller screens */
+    font-size: 30px; 
   }
 
   #message {
-    font-size: 30px; /* Decrease font size for smaller screens */
+    font-size: 30px; 
+  }
+
+  #dismiss-button{
+  font-size: 12px;
+
   }
 }
